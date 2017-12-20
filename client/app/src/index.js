@@ -1,14 +1,9 @@
 import api from './api'
 
-// api.members.read()
-//   .then((data) => {
-//     console.log('members.read', data)
-//   })
-
 const user = {
   firstName: 'joe',
   lastName: 'black',
-  email: 'joe01@joe.com',
+  email: 'john02@joe.com',
   password: 'joepwd',
 }
 api.users.register(user)

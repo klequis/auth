@@ -21,6 +21,7 @@ call passport.authenticate('local')
 
 #Other
 - Pluralsight - like their style
+- Also, this page: https://classroom.github.com/#
 
 #Guides
 - https://medium.com/@avanthikameenakshi/crud-react-express-99025f03f06e (ok but using q)
