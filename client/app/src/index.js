@@ -9,8 +9,8 @@ const user = {
 api.users.register(user)
   .then((data) => {
     if (data.result === 'user exists') {
-      console.log('user exists')
+      console.log('user already exists')
     } else {
-      console.log('users.registered', data)
+      console.log('user registered', data)
     }
   })

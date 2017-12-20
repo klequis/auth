@@ -1,23 +1,25 @@
 import express from 'express'
 import mysql from 'promise-mysql'
 import passport from 'passport'
-const router = express.Router();
 import { config } from '../config'
-console.log(config)
+import x from '../sample'
+
+console.log(x)
+const LocalStrategy = require('passport-local').Strategy
+const router = express.Router();
+
 passport.serializeUser(function(user, done) {
   done(null, user.id);
-});
+})
 
 passport.deserializeUser(function(id, done) {
-  connection.query("select * from users where id = " + id, function(err, rows) {
+  mysql.createConnection(config).query(`select * from users where id =  ${id}`, function(err, rows) {
     done(err, rows[0]);
-  });
-});
+  })
+})
 
 router.get('/', function(req, res) {
-  // console.log('connectionConfig', connectionConfig)
   res.send({ result: 'connected' })
-
 })
 
 // create
