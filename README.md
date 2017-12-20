@@ -5,6 +5,13 @@ Playing with api calls and authentication / registration
 ## to use
 1. create user table with below sql
 1. clone
+1. create .env file
+````
+DB_HOST=localhost
+DB_NAME=dbName
+DB_USER=userName
+DB_PASS=password
+````
 1. update connection information in .env
 1. cd to server
 1. yarn install && yarn start
